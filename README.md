@@ -33,3 +33,18 @@ Yukarıdaki örnekte de görüldüğü gibi işlem sayısı n'den başlayarak 1'
 6. Adımda *8 mi küçük 11 mi?* *8 küçüktür. İlk olarak 8 yazılır.*12 mi küçük 11 mi?* *11 küçük önce 11 yazılır.* son birleştirme işlemi de gerçekleştirilir. [8,11,12,16,21,22]
 
 Bölme işlemi esnasında 2^x=ndir. İşlem sayısı x=logn olur. Birleştirme işleminde n tane işlem yapılır. **O(nlogn)** olur.
+
+# Binary Search Tree
+
+*Binary Search Tree* ile hem sıralama hem de arama yapmanız mümkündür. Ayrıca eleman eklemek, çıkarmak ve bulmak oldukça kolaydır.
+
+[7,5,1,8,3,6,0,9,4,2] dizisini ele alalım.
+1. Adımda bir kök belirlemeliyiz. Bu kökümüz 5 olsun. Kökün sağında bulunan değer 5ten büyük solunda bulunan değerler 5ten küçük olacaktır. 5in şağında bulunan bubblemız 7 solunda bulunan bubblemız 3 olsun.
+2. Adımda seviye ikideki kökleri ele alacağız. 3ün sağında bulunan değer 4 solunda bulunan değer 1dir. 7nin sağında 9 solunda 6 vardır.
+3. Adımda seviye üçteki kökleri ele alacağız. 1in sağında 2 solunda 0 vardır. 9uz solunda 8 vardır. Ağaç şu şekildedir.
+                    5
+            3               7
+        1       4       6       9
+    0       2               8
+
+Time complexity *average case*de **O(logn)**dir.
