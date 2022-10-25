@@ -12,7 +12,7 @@
 
 Yukarıdaki örnekte de görüldüğü gibi işlem sayısı n'den başlayarak 1'e kadar olan sayıların toplamı kadardır. Toplam İşlem sayısı `n*(n-1)/2` kadardır. Buradan da **O(n^2)** olur.
 
-"18" değeri sıralı dizide ortada bulunduğundan dolayı case'i **average**dır.
+`18` değeri sıralı dizide ortada bulunduğundan dolayı case'i **average**dır.
 
 [7,3,5,8,2,9,4,15,6] bu dizinin ilk dört adımdaki sıralanışına bakalım.
 1. Adımda 2 ile 7 yer değiştirir. [2,3,5,8,7,9,4,15,6]
@@ -22,7 +22,7 @@ Yukarıdaki örnekte de görüldüğü gibi işlem sayısı n'den başlayarak 1'
 
 # Merge Sort Projesi
 
-*Merge Sort* bir sıralama yöntemidir. Bu yöntemde her bir adımda diziyi iki parçaya bölerek diziyi küçük parçalara ayırırız. En sonda iki veya daha az sayıda eleman kaldıktan sonra herbir parçayı sıralayarak birleştiririz. En sonunda sıralı bir dizi elde etmiş oluruz.
+*Merge Sort* bir sıralama yöntemidir. Bu yöntemde her bir adımda diziyi iki parçaya bölerek diziyi küçük parçalara ayırırız. Tek sayıda eleman kaldıktan sonra herbir parçayı sıralayarak birleştiririz. En sonunda sıralı bir dizi elde etmiş oluruz.
 
 [16,21,11,8,12,22] dizisini merge sort ile sıralayalım.
 1. Adımda dizi iki eşit parçaya bölünür. [16,21,11] [8,12,22]
@@ -30,7 +30,7 @@ Yukarıdaki örnekte de görüldüğü gibi işlem sayısı n'den başlayarak 1'
 3. Adımda diziler tekrardan bölünür. [16] [21] [11] [8] [12] [22]
 4. Adımda sıralama işlemine geçilir ve sıralama eleman bazında karşılaştırmalı olarak gerçekleştirilir. Yani bir dizinin ilk elemanı ile diğer dizinin ilk elemanından hangisi küçükse önce küçük olan yazılır daha sonra ilk karşılaştırmada diğerinden büyük olan eleman ile diğer dizideki ikinci küçük eleman karşılaştırılır. [16,21] [11] [8,12] [22]
 5. Adımda birleştirme işlemine devam edilir. [11,16,21] [8,12,22]
-6. Adımda *8 mi küçük 11 mi?* *8 küçüktür. İlk olarak 8 yazılır.*12 mi küçük 11 mi?* *11 küçük önce 11 yazılır.* son birleştirme işlemi de gerçekleştirilir. [8,11,12,16,21,22]
+6. Adımda *8 mi küçük 11 mi?* *8 küçüktür. İlk olarak 8 yazılır.* *12 mi küçük 11 mi?* *11 küçük önce 11 yazılır.* son birleştirme işlemi de gerçekleştirilir. [8,11,12,16,21,22]
 
 Bölme işlemi esnasında 2^x=ndir. İşlem sayısı x=logn olur. Birleştirme işleminde n tane işlem yapılır. **O(nlogn)** olur.
 
@@ -43,8 +43,8 @@ Bölme işlemi esnasında 2^x=ndir. İşlem sayısı x=logn olur. Birleştirme i
 2. Adımda seviye ikideki kökleri ele alacağız. 3ün sağında bulunan değer 4 solunda bulunan değer 1dir. 7nin sağında 9 solunda 6 vardır.
 3. Adımda seviye üçteki kökleri ele alacağız. 1in sağında 2 solunda 0 vardır. 9uz solunda 8 vardır. Ağaç şu şekildedir.
                     5
-            3               7
-        1       4       6       9
+            3                 7
+        1         4       6            9
     0       2               8
 
 Time complexity *average case*de **O(logn)**dir.
