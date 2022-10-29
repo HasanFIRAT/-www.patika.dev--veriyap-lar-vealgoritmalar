@@ -47,4 +47,4 @@ Bölme işlemi esnasında 2^x=ndir. İşlem sayısı x=logn olur. Birleştirme i
         1         4       6            9
     0       2               8
 
-Time complexity *average case*de **O(logn)**dir.
+Time complexity *average case*de **O(logn)** dir.
