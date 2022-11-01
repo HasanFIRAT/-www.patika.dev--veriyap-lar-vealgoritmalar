@@ -1,0 +1,3 @@
+# Temel Matematik Projesi
+
+Bu konuda önemli bir araştırma geliyor. Yakında sizlerle buluşacak...
